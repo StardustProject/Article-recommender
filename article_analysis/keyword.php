@@ -15,6 +15,7 @@
 	foreach ($article as $key => $value) {
 
 		# code...
+	
 		$content = json_decode($value->key);
 		for ($i=0; $i < sizeof($content ) ; $i++) { 
 			# code....
@@ -30,8 +31,6 @@
 		// var_dump($value->key);
 	}
 
-
-
     // $t = array();
     // $t = json_encode($str);
     // var_dump(json_decode($t));
@@ -41,8 +40,8 @@
 	$data = implode(',', $str);  //将数组转化为字符串
 	$API_TOKEN = "_Y4fJqQe.21418.nlZL0Vunn9tY";  //key  1DwUEeoy.19320.SIh8ADsPbOAT 
 	/**
-	关键提取
-	**/
+	 *关键提取
+	 **/
 	$SENTIMENT_URL = 'http://api.bosonnlp.com/keywords/analysis';   //提取关键词  按权重去排序
 	$ch = curl_init();
 	curl_setopt_array($ch, array(
